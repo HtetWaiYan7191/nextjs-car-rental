@@ -1,9 +1,10 @@
 import Image from 'next/image'
+import { Hero } from '@/components'
 
 export default function Home() {
   return (
     <main className="oveflow-hidden">
-     <h2>Hello World ! </h2>
+      <Hero/>
     </main>
   )
 }
