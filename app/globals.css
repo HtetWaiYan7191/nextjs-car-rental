@@ -2,3 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+.bg-hero-bg {
+    background-image: url(../public/hero-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+.image-overlay {
+    @apply absolute xl:-top-[1rem] xl:-right-[31%] bg-hero-bg -right-1/4 -z-10 w-full h-[300px] xl:h-full xl:w-full -top-10 overflow-hidden;
+  }
