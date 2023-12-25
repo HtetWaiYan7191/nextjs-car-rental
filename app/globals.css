@@ -12,11 +12,10 @@
     background-image: url(../public/hero-bg.png);
     background-size: cover;
     background-repeat: no-repeat;
-    
 }
 
-.mobile-navbar-page{
-    transition: all 0.4s ease;
+.hero-img {
+  z-index: -1 !important;
 }
 
 .image-overlay {

@@ -2,14 +2,14 @@ import React from "react";
 import Image from "next/image";
 import { CustomButton } from ".";
 import Menu from "./Menu";
-
+import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <nav className="flex items-center border-b shadow-sm fixed w-full top-0 mx-auto  p-5">
-      <div className="nav-logo">
+    <nav className="flex items-center border-b shadow-sm fixed h-14 w-full top-0  p-5">
+      <Link href="/" className="nav-logo">
         <Image src="/logo.svg" alt="logo" width={100} height={100}></Image>
-      </div>
+      </Link>
       <CustomButton
         title="Sign In"
         containerStyles="text-neutral-500 font-normal hidden md:block ml-auto"

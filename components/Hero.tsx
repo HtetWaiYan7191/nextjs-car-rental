@@ -39,7 +39,7 @@ const Hero = () => {
         </div> 
         <div className="hero-img-container relative">
                 <figure className="hero-image w-[500px] h-[200px] md:w-[800px] ">
-                   <Image src="/hero.png"   alt="hero-image" fill  className="object-contain" />
+                   <Image src="/hero.png"   alt="hero-image" fill  className="object-contain hero-img" />
                 </figure> 
                 <div className="image-overlay"></div> 
         </div>

@@ -7,6 +7,6 @@ export interface CustomButtonProps {
 }
 
 export interface MobileNavbarProps {
-    setShowMenu?: MouseEventHandler<HTMLButtonElement>;
+    handleClick?: MouseEventHandler<HTMLButtonElement>;
     showMenu?: boolean;
 }
