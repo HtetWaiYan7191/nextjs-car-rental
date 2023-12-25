@@ -14,7 +14,7 @@
     background-repeat: no-repeat;
 }
 
-.hero-img {
+.hero-img, img {
   z-index: -1 !important;
 }
 
@@ -23,6 +23,6 @@
 }
 
 .gray-text {
-  @apply text-gray-500 text-sm tracking-wide;
+  @apply text-gray-600 text-sm tracking-wide;
 }
 

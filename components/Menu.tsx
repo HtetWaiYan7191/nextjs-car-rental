@@ -5,13 +5,13 @@ import MobileNavbar from "./MobileNavbar";
 
 const Menu = () => {
     const [showMenu, setShowMenu] = useState(false);
-    console.log(showMenu)
     const handleClick = () => {
         setShowMenu(!showMenu)
+        console.log(showMenu)
     }
   return (
     <>
-      <LuMenu className={`ml-auto md:hidden block text-2xl transition-all ${showMenu && 'opacity-30'}`} onClick={handleClick} />
+      <LuMenu className={`ml-auto md:hidden block z-10 text-2xl transition-all ${showMenu && 'opacity-30'}`} onClick={handleClick} />
       <MobileNavbar handleClick={handleClick} showMenu={showMenu}/>
     </>
   );
