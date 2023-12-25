@@ -20,4 +20,9 @@
 
 .image-overlay {
     @apply absolute xl:-top-[1rem] xl:-right-[31%] bg-hero-bg -right-1/4 -z-10 w-full h-[300px] xl:h-full xl:w-full -top-10 overflow-hidden;
-  }
+}
+
+.gray-text {
+  @apply text-gray-500 text-sm tracking-wide;
+}
+

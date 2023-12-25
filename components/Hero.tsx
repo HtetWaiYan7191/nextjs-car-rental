@@ -1,24 +1,9 @@
 'use client'
 import React from "react";
-import { Poppins } from "next/font/google";
 import { CustomButton } from ".";
 import Image from "next/image";
 
-const poppins = Poppins({ 
-    subsets: ['latin'],
-    weight: [
-      "100",
-      "200",
-      "300",
-      "400",
-      "500",
-      "600",
-      "700",
-      "800",
-      "900"
-    ]
 
-})
 
 const Hero = () => {
   const handleClick = () => {
@@ -28,8 +13,8 @@ const Hero = () => {
     <section className="hero-section pt-36 px-5 overflow-hidden">
       <div className="flex flex-col md:flex-row gap-y-8 ">
         <div className="flex flex-col gap-y-3 md:gap-y-4">
-          <h1 className={ ` ${poppins.className} px-4 font-bold text-[1.7rem] max-w-[400px] md:max-w-[650px] md:text-5xl tracking-wider leading-[3rem] md:leading-[4rem]`}>Find, book,or rent a car  - quickly and easily ! </h1>
-          <p className={` ${poppins.className} px-4 text-[1.1rem] md:text-[1.5rem]  max-w-[550px] text-neutral-700  md:mt-6 leading-[1.5rem] md:leading-[2.4rem]`}>
+          <h1 className={ ` px-4 font-bold text-[1.7rem] max-w-[400px] md:max-w-[650px] md:text-5xl tracking-wider leading-[3rem] md:leading-[4rem]`}>Find, book,or rent a car  - quickly and easily ! </h1>
+          <p className={` px-4 text-[1.1rem] md:text-[1.5rem]  max-w-[550px] text-neutral-700  md:mt-6 leading-[1.5rem] md:leading-[2.4rem]`}>
             Streamline your car rental experience with our effortless booking process.
           </p>
           <div className="px-4">
