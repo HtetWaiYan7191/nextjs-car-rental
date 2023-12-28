@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 const Footer = () => {
   return (
-    <footer className=' flex justify-center flex-wrap gap-10 md:gap-60 py-10 mt-32 '>
+    <footer className=' flex justify-between flex-wrap gap-10 md:gap-60 py-10 mt-32 px-5 md:px-10 '>
       <div className='flex flex-col gap-y-5'>
         <Image src="/logo.svg" width={100} height={100} alt='footer-logo' className='img'/>
         <span className='gray-text'>
@@ -13,7 +13,7 @@ const Footer = () => {
           All RightsReserved @c
         </span>
       </div>
-
+    <div className='flex gap-32'>
       {
         footerLinks.map((footerLink) => (
           <div key={footerLink.title}>
@@ -26,6 +26,15 @@ const Footer = () => {
           </div>
         ))
       }
+       </div>
+
+      <div className='flex items-center w-full justify-between'>
+        <span className='gray-text text-sm md:text-lg'>@2023 Carhub All Rights Reserved</span>
+        <div className='flex gap-5'>
+          <span className='gray-text text-sm md:text-lg'>Privacy</span>
+          <span className='gray-text text-sm md:text-lg'>Terms of Use</span>
+        </div>
+      </div>
     </footer>
   )
 }

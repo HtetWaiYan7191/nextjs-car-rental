@@ -2,27 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
+body {
+  scroll-behavior: smooth;
+}
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-.bg-hero-bg {
-    background-image: url(../public/hero-bg.png);
-    background-size: cover;
-    background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.hero-img, img {
+.bg-hero-bg {
+  background-image: url(../public/hero-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.hero-img,
+img {
   z-index: -1 !important;
 }
 
 .image-overlay {
-    @apply absolute xl:-top-[1rem] xl:-right-[31%] bg-hero-bg -right-1/4 -z-10 w-full h-[300px] xl:h-full xl:w-full -top-10 overflow-hidden;
+  @apply absolute xl:-top-[1rem] xl:-right-[31%] bg-hero-bg -right-1/4 -z-10 w-full h-[300px] xl:h-full xl:w-full -top-10 overflow-hidden;
 }
 
 .gray-text {
   @apply text-gray-600 text-sm tracking-wide;
 }
-
