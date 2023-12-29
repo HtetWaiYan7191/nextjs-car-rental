@@ -10,3 +10,12 @@ export interface MobileNavbarProps {
     handleClick?: MouseEventHandler<HTMLButtonElement>;
     showMenu?: boolean;
 }
+
+export interface CustomFilterProps {
+    title: string;
+}
+
+export interface SearchManufacturerProps {
+    manufacturer: string;
+    setManufacturer: (manufacturer: string) => void;
+}
