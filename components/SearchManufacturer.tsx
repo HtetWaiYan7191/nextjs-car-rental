@@ -33,7 +33,7 @@ const SearchManufacturer = ({
               width={20}
               height={20}
               alt="manufacturer-logo"
-              className="ml-4"
+              className="ml-4 cursor-pointer"
             />
           </Combobox.Button>
 
