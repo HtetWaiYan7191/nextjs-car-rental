@@ -1,8 +1,10 @@
 import React from 'react'
 import SearchBar from './SearchBar'
 import CustomFilter from './CustomFilter'
+import { CarCatalogueProps } from '@/types'
+import CarCard from './CarCard'
 
-const CarCatalogue = () => {
+const CarCatalogue = ({isDataEmpty, allCars} : CarCatalogueProps) => {
   return (
     <section className='car-catalogue-section mt-12 px-10' id='discover'>
         <h2 className='font-semibold text-neutral-800 text-2xl'>Car Catalogue</h2>
@@ -16,7 +18,21 @@ const CarCatalogue = () => {
         </div>
         </div>
 
-       
+       {!isDataEmpty ? (
+        <section>
+          <div className='home-cars-wrapper'>
+            {
+              allCars?.map((car) => (
+                <CarCard car={car} />
+              ))
+            }
+          </div>
+        </section>
+       ) : (
+        <div>
+          <h2>we don't have cars</h2>
+        </div>
+       )}
 
 
     </section>

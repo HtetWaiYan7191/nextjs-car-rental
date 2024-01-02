@@ -52,13 +52,13 @@ const SearchManufacturer = ({
             afterLeave={() => setQuery("")}
           >
               <Combobox.Options
-              className='absolute mt-1 max-h-60 w-full overflow-auto rounded-md  py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm'
+              className='absolute mt-1 max-h-60 w-full  overflow-auto rounded-md  py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm'
               static
             >
               {filteredManufacturers.length === 0 && query !== "" ? (
                 <Combobox.Option
                   value={query}
-                  className=' cursor-default select-none py-2 pl-10 pr-4'
+                  className=' cursor-default select-none py-2 pl-10 pr-4 '
                 >
                   Create "{query}"
                 </Combobox.Option>
@@ -67,7 +67,7 @@ const SearchManufacturer = ({
                   <Combobox.Option
                     key={item}
                     className={({ active }) =>
-                      `relative cursor-default select-none py-2 pl-10 pr-4 z-20 bg-white  ${
+                      `relative cursor-default select-none py-2 pl-10 pr-4 z-20 bg-white  hover:text-white hover:bg-blue-500  ${
                         active ? " bg-blue-500 text-white" : "text-neutral-900"
                       }`
                     }
