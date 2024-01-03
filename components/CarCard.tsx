@@ -6,6 +6,7 @@ import Image from "next/image";
 import React from "react";
 import { CustomButton } from ".";
 import { calculateCarRent } from "@/utils";
+import {CarDetail} from ".";
 
 const CarCard = ({ car }: CarCardProps) => {
   const { city_mpg, year, make, model, transmission, drive } = car;
@@ -36,7 +37,7 @@ const CarCard = ({ car }: CarCardProps) => {
             alt="car model"
             fill
             priority
-            className="object-contain z-40"
+            className="object-contain"
           />
         </figure>
 
@@ -88,6 +89,8 @@ const CarCard = ({ car }: CarCardProps) => {
           </div>
         </div>
       </div>
+
+      <CarDetail isOpen={isOpen} closeModal={ () => setIsOpen(!isOpen)} car={car}/>
     </div>
   );
 };
