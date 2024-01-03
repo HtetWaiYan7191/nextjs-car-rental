@@ -58,7 +58,7 @@ const SearchManufacturer = ({
               {filteredManufacturers.length === 0 && query !== "" ? (
                 <Combobox.Option
                   value={query}
-                  className=' cursor-default select-none py-2 pl-10 pr-4 '
+                  className=' cursor-default select-none py-2 pl-10 pr-4 bg-white '
                 >
                   Create "{query}"
                 </Combobox.Option>
@@ -67,21 +67,21 @@ const SearchManufacturer = ({
                   <Combobox.Option
                     key={item}
                     className={({ active }) =>
-                      `relative cursor-default select-none py-2 pl-10 pr-4 z-20 bg-white  hover:text-white hover:bg-blue-500  ${
-                        active ? " bg-blue-500 text-white" : "text-neutral-900"
+                      `relative cursor-default select-none py-2 pl-10 pr-4 z-20   hover:bg-blue-500 hover:text-white  ${
+                        active ? " bg-blue-500 font-semibold" : "text-neutral-900 bg-white"
                       }`
                     }
                     value={item}
                   >
                     {({ selected, active }) => (
                       <>
-                        <span className={`block truncate ${selected ? "font-semibold " : "font-normal"}`}>
+                        <span className={`block truncate ${selected ? "font-semibold bg-blue-500 text-white " : "font-normal"}`}>
                           {item}
                         </span>
 
                         {/* Show an active blue background color if the option is selected */}
                         {selected ? (
-                          <span className={`absolute inset-y-0 left-0 flex items-center pl-3 ${active? "text-white": ""}`}
+                          <span className={`absolute inset-y-0 left-0 flex items-center pl-3 ${active? "text-white bg-blue-500": ""}`}
                           ></span>
                         ) : null}
                       </>
