@@ -24,6 +24,18 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: 'Car Rental',
   description: 'Discover the best cars in the world.',
+  icons: {
+    icon: [
+      '/favicon.ico?v=4'
+    ],
+    apple: [
+      'apple-touch-icon.png?v=4'
+    ],
+    shortcut: [
+      '/apple-touch-icon.png'
+    ],
+  },
+  manifest: '/site.webmanifest'
 }
 
 export default function RootLayout({

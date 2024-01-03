@@ -13,7 +13,7 @@ const Footer = () => {
           All RightsReserved @c
         </span>
       </div>
-    <div className='flex gap-32'>
+    <div className='flex gap-20 md:gap-32 flex-wrap'>
       {
         footerLinks.map((footerLink) => (
           <div key={footerLink.title}>
