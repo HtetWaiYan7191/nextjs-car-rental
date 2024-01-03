@@ -15,6 +15,10 @@ body {
   box-sizing: border-box;
 }
 
+.bg-pattern {
+  background-image: url(../public/pattern.png);
+}
+
 .bg-hero-bg {
   background-image: url(../public/hero-bg.png);
   background-size: cover;
@@ -22,7 +26,7 @@ body {
 }
 
 .hero-img,
-img, .right-arrow {
+ .right-arrow {
   z-index: -1 !important;
 }
 
@@ -40,5 +44,9 @@ img, .right-arrow {
 
 .car-card {
   @apply p-[2rem] shadow-md border rounded-2xl hover:shadow-lg hover:shadow-blue-100
+}
+
+::-webkit-scrollbar {
+  display: none; /* Width of the entire scrollbar */
 }
 
