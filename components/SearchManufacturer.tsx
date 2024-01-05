@@ -38,7 +38,7 @@ const SearchManufacturer = ({
           </Combobox.Button>
 
           <Combobox.Input
-            className=" ml-10 search-manufacturer-input w-full border-none py-2 pl-3 pr-10 text-sm leading-5 text-gray-900 focus:ring-0 outline-none"
+            className=" ml-10 search-manufacturer-input w-full md:w-fit border-none py-2 pl-3 pr-10 text-sm leading-5 text-gray-900 focus:ring-0 outline-none"
             placeholder={manufacturers[0]}
             displayValue={(manufacturer: string) => manufacturer}
             onChange={(event) => setQuery(event.target.value)}
