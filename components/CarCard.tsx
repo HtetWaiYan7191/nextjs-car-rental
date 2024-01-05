@@ -15,8 +15,8 @@ const CarCard = ({ car }: CarCardProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="car-card-group">
-      <div className="car-card my-[4.5rem]">
+    <div className="car-card-group ">
+      <div className="car-card">
         <h2 className="car-card-title">
           {make} {model}
         </h2>
