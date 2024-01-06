@@ -2,6 +2,7 @@
 import React, { useState } from 'react'
 import SearchManufacturer from './SearchManufacturer'
 import Image from 'next/image'
+import { useRouter } from 'next/navigation'
 
 const SearchButton = ({otherClasses} : {otherClasses: string}) => {
   return (
@@ -20,7 +21,34 @@ const SearchButton = ({otherClasses} : {otherClasses: string}) => {
 const SearchBar = () => {
     const [manufacturer, setManufacturer] = useState('');
     const [model, setModel] = useState('');
-    const handleSubmit = () => {}
+    const router = useRouter();
+
+    const handleSubmit = (e : React.FormEvent<HTMLFormElement>) => {
+      e.preventDefault();
+      if(manufacturer === '' && model === '') {
+        return alert('Please fill in the search bar')
+      }
+      updateSearchParams(model.toLowerCase(), manufacturer.toLowerCase())
+    }
+    const updateSearchParams = (model: string, manufacturer: string) => {
+      const searchParams = new URLSearchParams(window.location.search);
+    
+      if (model) {
+        searchParams.set('model', model);
+      } else {
+        searchParams.delete('model');
+      }
+    
+      if (manufacturer) {
+        searchParams.set('manufacturer', manufacturer);
+      } else {
+        searchParams.delete('manufacturer');
+      }
+    
+      const newPathname = `${window.location.pathname}?${searchParams.toString()}`; // Remove extra space
+      router.push(newPathname);
+    };
+
   return (
     <form className='search-bar flex flex-col md:flex-row md:items-center gap-5' onSubmit={handleSubmit}>
         <div className='manufacture flex gap-5 items-center '>
@@ -40,7 +68,7 @@ const SearchBar = () => {
             alt='car-model'
             />
             <input type="text" name='model' value={model} 
-            onChange={(e) => setModel(e.target.value)}
+            onChange={(e) => {setModel(e.target.value)}}
             placeholder='Tiguan'
             className='ml-10 search-manufacturer-input w-full border-none py-2  pl-3 pr-10 text-sm leading-5 text-gray-900 focus:ring-0 outline-none'
             />

@@ -1,4 +1,3 @@
-import { CarCardProps } from '@/types';
 import { MouseEventHandler } from "react";
 
 export interface CustomButtonProps {
@@ -47,6 +46,14 @@ export interface CarCardProps {
 export interface CarCatalogueProps {
     isDataEmpty: boolean;
     allCars: Car[];
+}
+
+export interface FilterProps {
+    manufacturer: string;
+    year: number;
+    fuel: string;
+    limit: number;
+    model: string;
 }
 
 
