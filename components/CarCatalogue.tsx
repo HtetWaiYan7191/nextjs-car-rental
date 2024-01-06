@@ -20,7 +20,7 @@ const CarCatalogue = ({isDataEmpty, allCars} : CarCatalogueProps) => {
 
        {!isDataEmpty ? (
         <section>
-          <div className='home-cars-wrapper grid grid-cols-12 md:grid-cols-3 gap-10'>
+          <div className='home-cars-wrapper grid grid-cols-1 md:grid-cols-3 gap-10'>
             {
               allCars?.map((car) => (
                 <CarCard car={car} />

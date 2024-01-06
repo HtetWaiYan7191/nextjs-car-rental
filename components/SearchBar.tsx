@@ -27,7 +27,7 @@ const SearchBar = () => {
             <SearchManufacturer 
             manufacturer = {manufacturer}
             setManufacturer = {setManufacturer}/>
-            <SearchButton otherClasses="sm:hidden "/>
+            <SearchButton otherClasses="block md:hidden "/>
         </div>
 
     
@@ -44,7 +44,7 @@ const SearchBar = () => {
             placeholder='Tiguan'
             className='ml-10 search-manufacturer-input w-full border-none py-2  pl-3 pr-10 text-sm leading-5 text-gray-900 focus:ring-0 outline-none'
             />
-              <SearchButton otherClasses='sm:hidden '/>
+              <SearchButton otherClasses='block md:hidden '/>
 
         </div>
         <SearchButton otherClasses='sm:hidden md:block max-sm:hidden'/>
