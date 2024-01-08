@@ -15,8 +15,14 @@ export interface MobileNavbarProps {
     showMenu?: boolean;
 }
 
+export interface OptionProps {
+    title: string;
+    value: string;
+}
+
 export interface CustomFilterProps {
     title: string;
+    options: OptionProps[];
 }
 
 export interface SearchManufacturerProps {
