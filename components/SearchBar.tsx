@@ -51,7 +51,7 @@ const SearchBar = () => {
 
   return (
     <form className='search-bar flex flex-col md:flex-row md:items-center gap-5' onSubmit={handleSubmit}>
-        <div className='manufacture flex gap-5 items-center '>
+        <div className='manufacture flex gap-5 items-center focus-within:bg-blue-100 '>
             <SearchManufacturer 
             manufacturer = {manufacturer}
             setManufacturer = {setManufacturer}/>
@@ -59,7 +59,7 @@ const SearchBar = () => {
         </div>
 
     
-        <div className='searchbar-item flex items-center  shadow-md '>
+        <div className='searchbar-item flex items-center  shadow-md focus-within:bg-blue-100 '>
             <Image
             src="/model-icon.png"
             width={25}
@@ -70,7 +70,7 @@ const SearchBar = () => {
             <input type="text" name='model' value={model} 
             onChange={(e) => {setModel(e.target.value)}}
             placeholder='Tiguan'
-            className='ml-10 search-manufacturer-input w-full border-none py-2  pl-3 pr-10 text-sm leading-5 text-gray-900 focus:ring-0 outline-none'
+            className='ml-10 search-manufacturer-input w-full border-none py-2 focus:bg-blue-100  pl-3 pr-10 text-sm leading-5 text-gray-900 focus:ring-0 outline-none focu'
             />
               <SearchButton otherClasses='block md:hidden '/>
 

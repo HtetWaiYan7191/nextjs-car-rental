@@ -26,8 +26,8 @@ const SearchManufacturer = ({
   return (
     <div className="serach-manufacturer  flex-1 max-sm:w-full flex justify-start items-center">
       <Combobox>
-        <div className=" relative w-full cursor-default  rounded-lg bg-white text-left shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75 focus-visible:ring-offset-2 focus-visible:ring-offset-teal-300 sm:text-sm">
-          <Combobox.Button className="absolute top-1/2 transform -translate-y-1/2 ">
+        <div className=" relative w-full cursor-default  rounded-lg bg-white text-left shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75 focus-visible:ring-offset-2 focus-visible:ring-offset-teal-300 focus-within:bg-blue-100 sm:text-sm">
+          <Combobox.Button className="absolute top-1/2 transform -translate-y-1/2  ">
             <Image
               src="/car-logo.svg"
               width={20}
@@ -38,7 +38,7 @@ const SearchManufacturer = ({
           </Combobox.Button>
 
           <Combobox.Input
-            className=" ml-10 search-manufacturer-input w-full md:w-fit border-none py-2 pl-3 pr-10 text-sm leading-5 text-gray-900 focus:ring-0 outline-none"
+            className=" ml-10 search-manufacturer-input w-full md:w-fit border-none py-2 pl-3 pr-10 text-sm leading-5 text-gray-900 focus:ring-0 focus:bg-blue-100 outline-none"
             placeholder={manufacturers[0]}
             displayValue={(manufacturer: string) => manufacturer}
             onChange={(event) =>{ setQuery(event.target.value);setManufacturer(event.target.value);}}
